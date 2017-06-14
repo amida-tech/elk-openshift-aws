@@ -14,3 +14,8 @@ sudo oc new-app https://github.com/amida-tech/elk-openshift-aws --context-dir=el
 # Logstash
 sudo oc new-app https://github.com/amida-tech/elk-openshift-aws --context-dir=logstash --name=logstash
 ```
+
+## Persisting data
+If you want to guarantee that your Elasticsearch data is persisted across any cluster changes,
+create a persistent volume claim from the OpenShift console. Then, mount it at `/usr/share/elasticsearch/data` within
+the Elasticsearch deployment configuration.

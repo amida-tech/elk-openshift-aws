@@ -1,9 +1,10 @@
 # ELK stack for OpenShift on AWS
 
+## Running OpenShift on AWS
+Our OpenShift Origin instance runs on CentOS 7, configured using the following walkthrough: https://www.clouda.ca/blog/general/openshift-on-centos-7-quick-installation/
+
 ## Setup
 ```
-sudo oc cluster up --public-hostname <EC2 public IP>
-
 # Kibana
 sudo oc new-app https://github.com/amida-tech/elk-openshift-aws --context-dir=kibana --name=kibana
 sudo oc expose service kibana
